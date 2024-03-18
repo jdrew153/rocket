@@ -71,14 +71,11 @@ fn index() -> String {
     return "Howdy".to_string()
 }
 
-#[options("/<_..>")]
-fn all_options() {
-    /* Intentionally left empty */
-}
+
 
 #[launch]
 fn rocket() -> _ {
     rocket::build()
         .attach(cors::Cors)
-        .mount("/", routes![all_options, index, create_message, delete_message_handler, read_all_messages])
+        .mount("/", routes![index, create_message, delete_message_handler, read_all_messages])
 }

@@ -26,7 +26,7 @@ impl Fairing for Cors {
         ));
         response.set_header(Header::new(
             "access-control-allow-headers",
-            "*"
+            "Origin, X-Requested-With, Content-Type, Accept"
         ));
     }
 }
