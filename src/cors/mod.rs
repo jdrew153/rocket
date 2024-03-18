@@ -26,7 +26,7 @@ impl Fairing for CORS {
 
         response.set_header(Header::new(
             "Access-Control-Allow-Origin",
-            "*",
+            "https://scylladbmessenger.vercel.app/",
         ));
         response.set_header(Header::new("Access-Control-Allow-Credentials", "true"));
     }
