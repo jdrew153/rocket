@@ -79,6 +79,6 @@ fn all_options() {
 #[launch]
 fn rocket() -> _ {
     rocket::build()
-        .attach(CORS)
+        .attach(cors::Cors)
         .mount("/", routes![all_options, index, create_message, delete_message_handler, read_all_messages])
 }
