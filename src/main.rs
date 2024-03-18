@@ -73,5 +73,7 @@ fn index() -> String {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build().mount("/", routes![index, create_message, delete_message_handler, read_all_messages])
+    rocket::build()
+        .attach(CORS)
+        .mount("/", routes![index, create_message, delete_message_handler, read_all_messages])
 }
