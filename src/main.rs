@@ -8,7 +8,7 @@ use rocket::http::Status;
 use rocket::serde::json::Json;
 use scylla::{Session, SessionBuilder};
 use tokio;
-use crate::cors::CORS;
+
 use crate::message::message::{add_message, delete_message, Message, read_messages, ReturnMessageType};
 
 #[macro_use] extern crate rocket;
