@@ -24,5 +24,9 @@ impl Fairing for Cors {
             "access-control-allow-methods",
             "GET, PATCH, OPTIONS, POST",
         ));
+        response.set_header(Header::new(
+            "access-control-allow-headers",
+            "*"
+        ));
     }
 }
