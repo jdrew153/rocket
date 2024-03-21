@@ -18,7 +18,7 @@ impl Fairing for Cors {
                              response: &mut Response<'r>) {
         response.set_header(Header::new(
             "access-control-allow-origin",
-            "https://scylladbmessenger.vercel.app/",
+            "*",
         ));
         response.set_header(Header::new(
             "access-control-allow-methods",
